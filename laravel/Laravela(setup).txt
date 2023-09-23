@@ -1,0 +1,47 @@
+SET UP:
+1 install apachee : https://www.apachefriends.org/index.html
+2 install compresor :https://getcomposer.org/download/ (click .exe file 2 times to install)
+3 chose path to craete project: eg(cd C:\xampp\htdocs)
+4 create larvela project using :composer create-project laravel/laravel name of your project.
+5 cd your project then open in vs ode use code .
+6 open route / web.php : it defies the route of your web application,
+default web.php  :
+<?php
+
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+modifie itr to ypour needs:
+
+<?php
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TaskController;
+
+Route::get('/', [TaskController::class, 'index']);
+
+Here's what's happening:
+We're importing the TaskController class at the top using the use statement.
+We're defining a new route using the Route::get() method.
+The first parameter is the URL path ("/" in this case) that the route responds to.
+The second parameter is an array containing the controller class and the method that should be executed when the route is accessed. In this case, we're saying that when the root URL ("/") is accessed, the index method of the TaskController class should be called.
+Controller Method:
+
+The controller method we're referencing, index() in this case, is responsible for handling the logic related to the route. In our example, the index method will fetch the list of tasks and pass it to the view for display.
+Defining routes allows you to map URLs to specific actions in your application, which is a foundational concept in web development. By using controllers, you can keep your route handling logic organized and maintainable, as your application grows in complexity.
+
+7 .Generate a Controller:
+Why Use Controllers:
+
+In Laravel, controllers are used to handle user requests and manage the application's response. They help to separate the business logic and data handling from the presentation layer
+
+Run the following command to generate a new controller named TaskController:
+php artisan make:controller TaskController
+This command will create a new file named TaskController.php in the app/Http/Controllers directory.
+male sure that you run this command on your project folde .
+
+
+

@@ -1,0 +1,18 @@
+laravel is a php framework
+both web and api development.
+easy frame work
+large comunity is used
+laravel - is a serever side (Refresh all time)
+(simple page creatable is easy)
+MVC - model view controller.
+	software developmwnt  pattern UI,Controller,data implement these
+	M-data mangae Business logic.
+	V-handel layout display
+	c-Route(Mapping).
+Composer
+	->dependency manage
+	->set of packages installed by single line.
+	->Single line access
+	->equal to nmp in node.js
+File structure
+	-> 
